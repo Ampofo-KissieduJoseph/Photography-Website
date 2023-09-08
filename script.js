@@ -1,8 +1,9 @@
-// change nav style on scroll
 
+// Change NAV Style on scroll
 window.addEventListener('scroll', () => {
     document.querySelector('nav').classList.toggle('window-scrolled', window.scrollY > 0);
 })
+
 
 //CONTACT BUTTONS circular text buttons
 const textButtons = document.querySelectorAll('.contact__btn');
@@ -14,7 +15,7 @@ textButtons.forEach(textButtons => {
 })
 
 
-//Swipper js Gallery Section
+//Swiper js Gallery Section
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 20,

@@ -531,7 +531,7 @@ footer{
     gap: 2rem;
 }
 
-.footer__btn{
+.footers__btn{
     width: 5rem;
     height: 5rem;
     border: 0.2rem solid var(--primary-variant-color);
