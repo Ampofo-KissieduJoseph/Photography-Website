@@ -35,3 +35,28 @@ var swiper = new Swiper(".mySwiper", {
     }
   });
 
+// responsive nav bar/menu bar
+
+const nav = document.querySelector('.nav__links');
+const openNavBtn = document.querySelector('#nav__open__toggle');
+const closeNavBtn = document.querySelector('#nav__close__toggle');
+
+const openNav = () => {
+    nav.style.display = 'flex';
+    openNavBtn.style.display ='none';
+    closeNavBtn.style.display = 'inline-block';
+}
+openNavBtn.addEventListener('click', openNav);
+
+const closeNav = () => {
+    nav.style.display = 'none';
+    openNavBtn.style.display = 'inline-block';
+    closeNavBtn.style.display = 'none';
+}
+closeNavBtn.addEventListener('click', closeNav);
+
+if(document.body.clientwidth < 1024){
+    nav.querySelectorAll('li a').forEach(navLink => {
+        navLink.addEventListener('click', closeNav)
+    })
+}
